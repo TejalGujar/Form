@@ -63,6 +63,11 @@ public class FormActivity extends AppCompatActivity
 
                 PatientDetails pd = new PatientDetails(strFirstName,strLastName,strGender,strSymptoms);
 
+                edtPatientFirstName.setText("");
+                edtPatientLastName.setText("");
+                edtPatientGender.setText("");
+                edtPatientSymptoms.setText("");
+
                 //Insertion
                 firestoreDB.collection("PATIENT_DETAILS").add(pd.toMap()).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
